@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #0084fd;
+    --secondary-color: #b5ddff;
+}
+
+html{
+    font-family: "PT Sans", sans-serif;
+    font-size: 100%;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.container{
+    width: 100%;
+    padding: 1rem;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .hamburger-menu{
+    font-size: 1.5rem;
+}
+
+header .main-menu{
+    display: none;
+}
+
+.main-menu ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.main-menu li{
+    display: inline-block;
+    padding-left: 1.5rem;
+}
+
+@media screen and (min-width: 992px) {
+    .container{
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    header .hamburger-menu{
+        display: none;
+    }
+
+    header .main-menu{
+        display: block;
+    }
+}
