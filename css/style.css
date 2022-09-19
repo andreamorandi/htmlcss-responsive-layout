@@ -1,9 +1,11 @@
+/* RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* COMMON */
 :root{
     --primary-color: #0084fd;
     --secondary-color: #b5ddff;
@@ -23,6 +25,19 @@ img{
     width: 100%;
 }
 
+.container{
+    width: 100%;
+    padding: 0 2em;
+    margin: 0 auto;
+}
+
+.end-container{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* HEADER */
 header{
     position: fixed;
     top: 0;
@@ -32,11 +47,6 @@ header{
     height: 5rem;
     color: white;
     background-color: var(--primary-color);
-}
-
-.container{
-    width: 100%;
-    padding: 0 2em;
 }
 
 header .container{
@@ -64,6 +74,7 @@ header .main-menu{
     padding-left: 1.5rem;
 }
 
+/* PRESENTATION */
 .presentation .cards{
     width: 100%;
     padding: 3em 0;
@@ -78,15 +89,11 @@ header .main-menu{
     padding: 1em;
 }
 
+/* OFFER */
 .offer{
     width: 100%;
     padding: 3em 0;
     background-color: var(--tertiary-color);
-}
-
-.offer *{
-    /* debug */
-    padding-bottom: 2em;
 }
 
 .offer .card{
@@ -95,6 +102,11 @@ header .main-menu{
     background-color: white;
 }
 
+.offer .img-offer-top{
+    margin: 4em 0 8em 0;
+}
+
+/* TESTIMONIALS */
 .testimonials .container >*{
     margin: 2em 0;
 }
@@ -103,7 +115,7 @@ header .main-menu{
     width: 100%;
 
     /* debug */
-    padding: 3em 0;
+    padding: 5em 0;
 }
 
 .testimonials .card{
@@ -121,6 +133,7 @@ header .main-menu{
     max-width: 70%;
 }
 
+/* BENEFITS */
 .benefits{
     width: 100%;
     background-color: var(--tertiary-color);
@@ -139,6 +152,47 @@ header .main-menu{
     /* debug */
     margin: 2em 0;
 }
+
+/* ABOUT */
+.about{
+    padding: 3em 0;
+}
+
+.about .text >*{
+    /* debug */
+    margin-bottom: 2em;
+}
+
+.about img{
+    width: 40%;
+}
+
+/* CTA */
+.cta{
+    color: white;
+    background-color: var(--tertiary-color);
+    text-align: center;
+
+    /* debug */
+    padding: 2em 0;
+}
+
+/* FOOTER */
+footer{
+    color: white;
+    background-color: black;
+    text-align: center;
+
+    /* debug */
+    padding: 2em 0;
+}
+
+/* CTA & FOOTER */
+.end-container >*{
+    /* debug */
+    padding: 1em 0;
+}
+
 
 /* SCREEN 768+ */
 @media screen and (min-width: 768px) {
@@ -168,17 +222,41 @@ header .main-menu{
     }
 
     /* BENEFITS */
-        .benefits .cards{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+    .benefits .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-        .benefits .card{
-            width: calc((100% / 2) - 1em);
-        }
+    .benefits .card{
+        width: calc((100% / 2) - 1em);
+    }
 
+    /* ABOUT */
+    .about .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .about .text{
+        width: 65%;
+    }
+
+    .about .citation{
+        width: 30%;
+    }
+
+    .about img{
+        width: 100%;
+    }
+
+    /* CTA & FOOTER  */
+    .end-container{
+        width: 70%;
+        max-width: 500px;
+    }
 }
+
 
 /* SCREEN 992+ */
 @media screen and (min-width: 992px) {
@@ -208,6 +286,7 @@ header .main-menu{
     .offer .container{
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
         width: 70%;
         max-width: 800px;
     }
@@ -221,4 +300,9 @@ header .main-menu{
         width: calc((100% / 3) - 1em);
     }
 
+    /* CTA & FOOTER */
+    .end-container{
+        width: 50%;
+        max-width: 500px;
+    }
 }
