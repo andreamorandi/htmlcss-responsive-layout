@@ -35,6 +35,7 @@ img{
 .end-container{
     width: 100%;
     max-width: 400px;
+    padding: 0 2em;
     margin: 0 auto;
 }
 
@@ -50,6 +51,10 @@ a{
 
 p{
     line-height: 1.7rem;
+}
+
+.underline{
+    text-decoration: underline;
 }
 
 /* HEADER */
@@ -92,12 +97,12 @@ header .main-menu{
 }
 
 /* PRESENTATION */
-.presentation .cards{
+#presentation .cards{
     width: 100%;
     padding: 3em 0;
 }
 
-.presentation .card{
+#presentation .card{
     border-radius: 15px;
     padding: 2em 2em 0 2em;
     margin-bottom: 1.5em;
@@ -106,61 +111,61 @@ header .main-menu{
     text-align: center;
 }
 
-.presentation .card h3{
+#presentation .card h3{
     color: var(--primary-color);
 }
 
-.presentation .card p{
+#presentation .card p{
     font-weight: 700;
     padding: 1em 0 2em 0;
 }
 
-.presentation .card:first-child p,
-.presentation .card:first-child h3{
+#presentation .card:first-child p,
+#presentation .card:first-child h3{
     text-align: left;
 }
 
-.presentation .card a,
-.presentation .card .fa-apple{
+#presentation .card a,
+#presentation .card .fa-apple{
     font-weight: 700;
     color: white;
 }
 
-.presentation .card a{
+#presentation .card a{
     padding: 0.5rem 4.5rem;
     margin-bottom: 2em;
     border-radius: 30px;
     background-color: var(--primary-color);
 }
 
-.presentation .card i:not(.fa-apple){
+#presentation .card i:not(.fa-apple){
     transform: scale(3.5);
     margin: 1em 0 2em 0;
     color: var(--primary-color);
 }
 
-.presentation .demo-image{
+#presentation .demo-image{
     display: flex;
     justify-content: center;
 }
 
-.presentation .demo-image img{
+#presentation .demo-image img{
     max-width: 250px;
 }
 
 /* OFFER */
-.offer{
+#offer{
     width: 100%;
     padding: 3em 0;
     color: white;
     background-color: var(--tertiary-color);
 }
 
-.offer p{
+#offer p{
     margin-bottom: 1.5em;
 }
 
-.offer .card{
+#offer .card{
     padding: 3em;
     border-radius: 50px;
     text-align: center;
@@ -168,31 +173,31 @@ header .main-menu{
     background-color: white;
 }
 
-.offer .image-wrapper{
+#offer .image-wrapper{
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.offer .card p{
+#offer .card p{
     font-style: italic;
 }
 
-.offer .img-offer-top{
+#offer .img-offer-top{
     padding: 2em 0 4em 0;
 }
 
-.offer .planning h2{
+#offer .planning h2{
     font-size: 2rem;
     padding-bottom: 1.5em;
 }
 
-.offer .card h3{
+#offer .card h3{
     font-size: 1.5rem;
     padding: 1em 0;
 }
 
-.offer .card i{
+#offer .card i{
     width: 50px;
     line-height: 50px;
     border-radius: 50%;
@@ -200,20 +205,20 @@ header .main-menu{
 }
 
 /* TESTIMONIALS */
-.testimonials{
+#testimonials{
     text-align: center;
     padding: 2em 0;
 }
 
-.testimonials .container >*{
+#testimonials .container >*{
     padding: 1rem 0;
 }
 
-.testimonials .cards{
+#testimonials .cards{
     width: 100%;
 }
 
-.testimonials .card{
+#testimonials .card{
     color: white;
     background-color: var(--tertiary-color);
     text-align: center;
@@ -222,7 +227,7 @@ header .main-menu{
     padding: 1em;
 }
 
-.testimonials .card img{
+#testimonials .card img{
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -230,30 +235,30 @@ header .main-menu{
     display: inline-block;
 }
 
-.testimonials .card p{
+#testimonials .card p{
     padding: 1em 0;
 }
 
-.testimonials h1{
+#testimonials h1{
     font-size: 2.5rem;
     color: var(--tertiary-color);
 }
 
 /* BENEFITS */
-.benefits{
+#benefits{
     width: 100%;
     background-color: var(--tertiary-color);
     text-align: center;
     padding: 5rem 0;
 }
 
-.benefits h1{
+#benefits h1{
     font-size: 2.5rem;
     padding-bottom: 1.5em;
     color: white;
 }
 
-.benefits .card{
+#benefits .card{
     background-color: white;
     border-radius: 15px;
     text-align: left;
@@ -261,18 +266,18 @@ header .main-menu{
     margin-bottom: 2em;
 }
 
-.benefits .card h1{
+#benefits .card h1{
     font-size: 3rem;
     padding: unset;
     color: var(--tertiary-color);
 }
 
-.benefits .card h2{
+#benefits .card h2{
     padding: .7em 0;
     color: var(--tertiary-color);
 }
 
-.benefits .card a{
+#benefits .card a{
     padding: .5em 3.5em;
     border-radius: 50px;
     margin-top: 1.5em;
@@ -282,11 +287,11 @@ header .main-menu{
 }
 
 /* ABOUT */
-.about{
-    padding: 3em 0;
+#about{
+    padding: 4em 0;
 }
 
-.about img{
+#about img{
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -294,12 +299,12 @@ header .main-menu{
     display: inline-block;
 }
 
-.about h1{
+#about h1{
     font-size: 3rem;
     color: var(--tertiary-color);
 }
 
-.about .text >*{
+#about .text >*{
     padding-bottom: 2rem;
 }
 
@@ -331,29 +336,57 @@ header .main-menu{
 }
 
 /* CTA */
-.cta{
+#cta{
     color: white;
     background-color: var(--tertiary-color);
     text-align: center;
+    padding: 4em 0;
+}
 
-    /* debug */
-    padding: 2em 0;
+#cta .end-container span:first-child{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#cta .end-container span:last-child{
+    color: white;
+}
+
+#cta h2{
+    font-size: 2rem;
+}
+
+#cta h1{
+    font-size: 4rem;
+    color: #fdc15f;
+}
+
+#cta .end-container h3{
+    padding: 1em 5em;
+    margin: 1em 0;
+    border-radius: 50px;
+    color: var(--tertiary-color);
+    background-color: white;
 }
 
 /* FOOTER */
 footer{
     color: white;
-    background-color: black;
+    background-color: #333333;
     text-align: center;
-
-    /* debug */
     padding: 2em 0;
+}
+
+footer .end-container p:first-child{
+    padding-bottom: 2em;
+}
+
+footer a{
+    color: var(--tertiary-color);
 }
 
 /* CTA & FOOTER */
 .end-container >*{
-    /* debug */
-    padding: 1em 0;
+    padding: 1rem 0;
 }
 
 
@@ -361,75 +394,75 @@ footer{
 @media screen and (min-width: 768px) {
 
     /* PRESENTATION */
-    .presentation .cards{
+    #presentation .cards{
         display: flex;
         flex-wrap: wrap;
         gap: 1.5em;
     }
     
-    .presentation .card{
+    #presentation .card{
         width: calc((100% / 3) - 1em);
         margin: unset;
     }
 
-    .presentation .card:first-child{
+    #presentation .card:first-child{
         width: calc(((100% / 3) * 2) - (1em / 2));
     }
 
-    .presentation .card:first-child .demo-text{
+    #presentation .card:first-child .demo-text{
         text-align: left;
     }
 
-    .presentation .demo-image{
+    #presentation .demo-image{
         justify-content: flex-start;
     }
 
     /* TESTIMONIALS */
-    .testimonials .card{
+    #testimonials .card{
         display: flex;
         align-items: center;
         text-align: left;
     }
 
-    .testimonials .card p{
+    #testimonials .card p{
         padding: 0 2rem;
     }
 
-    .testimonials h3{
+    #testimonials h3{
         margin: .8rem 2rem;
     }
 
     /* BENEFITS */
-    .benefits .cards{
+    #benefits .cards{
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
     }
 
-    .benefits .card{
+    #benefits .card{
         width: calc((100% / 2) - 1em);
         margin: unset;
     }
 
-    .benefits .card h1{
+    #benefits .card h1{
         font-size: 4rem;
     }
 
     /* ABOUT */
-    .about .container{
+    #about .container{
         display: flex;
         justify-content: space-between;
     }
     
-    .about .text{
+    #about .text{
         width: 70%;
     }
 
-    .about .citation{
+    #about .citation{
         width: 25%;
     }
 
-    .about h2{
+    #about h2{
         font-size: 1.5rem;
     }
     
@@ -461,26 +494,26 @@ footer{
     }
 
     /* PRESENTATION */
-    .presentation .card:first-child{
+    #presentation .card:first-child{
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
     }
 
-    .presentation .demo-text{
+    #presentation .demo-text{
         width: 55%;
     }
 
-    .presentation .demo-image{
+    #presentation .demo-image{
         width: 45%;
     }
 
-    .presentation .demo-image{
+    #presentation .demo-image{
         align-self: flex-end;
     }
 
     /* OFFER */
-    .offer .container{
+    #offer .container{
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -488,32 +521,32 @@ footer{
         max-width: 800px;
     }
 
-    .offer .img-offer-top{
+    #offer .img-offer-top{
         padding: 4em 0 8em 0;
     }
 
-    .offer .container >*{
+    #offer .container >*{
         width: calc((100% / 2) - 1em);
     }
 
-    .offer h2{
+    #offer h2{
         font-size: 1.5rem;
     }
 
-    .offer h3{
+    #offer h3{
         font-size: 1.5rem;
     }
 
-    .offer p{
+    #offer p{
         margin-bottom: unset;
     }
 
-    .offer i{
+    #offer i{
         margin-top: 1.5em;
     }
 
      /* BENEFITS */
-    .benefits .card{
+    #benefits .card{
         width: calc((100% / 3) - 1em);
     }
 
@@ -521,5 +554,15 @@ footer{
     .end-container{
         width: 50%;
         max-width: 500px;
+    }
+}
+
+/* SCREEN 1200+ */
+@media screen and (min-width: 1200px) {
+    .container{
+        max-width: 1500px;
+    }
+    .end-container{
+        max-width: 700px;
     }
 }
