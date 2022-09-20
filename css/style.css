@@ -22,7 +22,8 @@ body{
 }
 
 img{
-    width: 100%;
+    max-width: 100%;
+    display: block;
 }
 
 .container{
@@ -35,6 +36,20 @@ img{
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+}
+
+p{
+    line-height: 1.5rem;
 }
 
 /* HEADER */
@@ -64,14 +79,16 @@ header .main-menu{
     display: none;
 }
 
-.main-menu ul{
-    list-style-type: none;
-    display: flex;
-}
-
 .main-menu li{
     display: inline-block;
-    padding-left: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.main-menu li:last-child a{
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    color: black;
+    background-color: white;
 }
 
 /* PRESENTATION */
@@ -82,40 +99,118 @@ header .main-menu{
 
 .presentation .card{
     border-radius: 15px;
+    padding: 2em 2em 0 2em;
     margin-bottom: 1.5em;
+    color: #5a6e7f;
     background-color: var(--secondary-color);
+    text-align: center;
+}
 
-    /* debug */
-    padding: 1em;
+.presentation .card h3{
+    color: var(--primary-color);
+}
+
+.presentation .card p{
+    font-weight: 700;
+    padding: 1em 0 2em 0;
+}
+
+.presentation .card:first-child p,
+.presentation .card:first-child h3{
+    text-align: left;
+}
+
+.presentation .card a,
+.presentation .card .fa-apple{
+    font-weight: 700;
+    color: white;
+}
+
+.presentation .card a{
+    padding: 0.5rem 4.5rem;
+    margin-bottom: 2em;
+    border-radius: 30px;
+    background-color: var(--primary-color);
+}
+
+.presentation .card i:not(.fa-apple){
+    transform: scale(3.5);
+    margin: 1em 0 2em 0;
+    color: var(--primary-color);
+}
+
+.presentation .demo-image{
+    display: flex;
+    justify-content: center;
+}
+
+.presentation .demo-image img{
+    max-width: 250px;
 }
 
 /* OFFER */
 .offer{
     width: 100%;
     padding: 3em 0;
+    color: white;
     background-color: var(--tertiary-color);
 }
 
+.offer p{
+    margin-bottom: 1.5em;
+}
+
 .offer .card{
-    padding: 1em;
+    padding: 3em;
     border-radius: 50px;
+    text-align: center;
+    color: black;
     background-color: white;
 }
 
+.offer .image-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.offer .card p{
+    font-style: italic;
+}
+
 .offer .img-offer-top{
-    margin: 4em 0 8em 0;
+    padding: 2em 0 4em 0;
+}
+
+.offer .planning h2{
+    font-size: 2rem;
+    padding-bottom: 1.5em;
+}
+
+.offer .card h3{
+    font-size: 1.5rem;
+    padding: 1em 0;
+}
+
+.offer .card i{
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: var(--tertiary-color);
 }
 
 /* TESTIMONIALS */
+.testimonials{
+    text-align: center;
+    padding: 2em 0;
+}
+
 .testimonials .container >*{
-    margin: 2em 0;
+    padding: 1em 0;
 }
 
 .testimonials .cards{
     width: 100%;
-
-    /* debug */
-    padding: 5em 0;
 }
 
 .testimonials .card{
@@ -124,13 +219,19 @@ header .main-menu{
     text-align: center;
     margin-bottom: 2em;
     border-radius: 30px;
-
-    /* debug */
     padding: 1em;
 }
 
 .testimonials .card img{
-    max-width: 70%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.testimonials .card p{
+    padding: 1em 0;
 }
 
 /* BENEFITS */
@@ -200,36 +301,52 @@ footer{
     /* PRESENTATION */
     .presentation .cards{
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
+        gap: 1.5em;
     }
     
     .presentation .card{
         width: calc((100% / 3) - 1em);
+        margin: unset;
     }
 
     .presentation .card:first-child{
         width: calc(((100% / 3) * 2) - (1em / 2));
     }
 
+    .presentation .card:first-child .demo-text{
+        text-align: left;
+    }
+
+    .presentation .demo-image{
+        justify-content: flex-start;
+    }
+
     /* TESTIMONIALS */
     .testimonials .card{
         display: flex;
+        align-items: center;
+        text-align: left;
     }
 
-    .testimonials .card img{
-        max-width: 20%;
+    .testimonials .card p{
+        padding: 0 2rem;
+    }
+
+    .testimonials h3{
+        margin: .8rem 2rem;
     }
 
     /* BENEFITS */
     .benefits .cards{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        gap: 20px;
     }
 
     .benefits .card{
         width: calc((100% / 2) - 1em);
+        margin: unset;
     }
 
     /* ABOUT */
@@ -280,6 +397,20 @@ footer{
     /* PRESENTATION */
     .presentation .card:first-child{
         display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .presentation .demo-text{
+        width: 55%;
+    }
+
+    .presentation .demo-image{
+        width: 45%;
+    }
+
+    .presentation .demo-image{
+        align-self: flex-end;
     }
 
     /* OFFER */
@@ -291,8 +422,28 @@ footer{
         max-width: 800px;
     }
 
+    .offer .img-offer-top{
+        padding: 4em 0 8em 0;
+    }
+
     .offer .container >*{
         width: calc((100% / 2) - 1em);
+    }
+
+    .offer h2{
+        font-size: 1.5rem;
+    }
+
+    .offer h3{
+        font-size: 1.5rem;
+    }
+
+    .offer p{
+        margin-bottom: unset;
+    }
+
+    .offer i{
+        margin-top: 1.5em;
     }
 
      /* BENEFITS */
